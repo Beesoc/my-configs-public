@@ -8,7 +8,7 @@ set -e
 scripts_dir=/opt/easy-linux
 compiled_dir=$HOME/compiled
 
-sudo chmod a+x ${compiled_dir}/easy-linux/INSTALL.sh
+#sudo chmod a+x ${compiled_dir}/easy-linux/INSTALL.sh
     
 CY='\e[1;36m'
 WT='\e[1;37m'
