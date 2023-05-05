@@ -1,7 +1,7 @@
 #!/bin/bash
 # Installer script for Beesoc's Easy Linux Loader.
 #          ADMIN NOTE:  add zip files to archive with:
-#          zip -r INSTALL.zip ./support/ ./install/
+#          zip -r INSTALL.zip ./support/ ./install/ ./archive/
 # Version: 0.0.2
 set -e
 
@@ -44,9 +44,9 @@ printf "        need a ${WT}Github username ${CY}and ${WT}fine-grained access to
 printf "\\n  ${OG}If you need to create a fine grained personal access token, see here for instructions:${GN}\\n" 
 printf "https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-fine-grained-personal-access-token"
 printf " \\n"
-printf "${WT}\\n   For more info on Github's Personal Access Token see:\\n" 
+printf "${WT}    For more info on Github's Personal Access Token see:\\n" 
 printf "${OG}https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token.\\n"
-printf "\\n${CY}Press ${WT}any ${CY}key to continue.                            Press ${RED}[ctrl+c] ${CY}to cancel\\n"
+printf " \\n${CY}Press ${WT}any ${CY}key to continue.                            Press ${RED}[ctrl+c] ${CY}to cancel\\n"
 #printf "${WT}\\n    ---->"
 printf "${WT} \\n"
   read -r -n1 -s -t 60
