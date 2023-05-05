@@ -68,4 +68,4 @@ printf "${WT} \\n"
        git clone https://github.com/Beesoc/easy-linux.git
      fi  
     
-    bash $HOME/compiled/easy-linux/INSTALL.sh
+    source $HOME/compiled/easy-linux/INSTALL.sh
