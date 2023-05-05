@@ -51,7 +51,8 @@ printf "${WT} \\n"
        mkdir ${compiled_dir}
      fi
      if [[ ! -d ${compiled_dir}/easy-linux ]]; then
-           printf "  ${CY}${compiled_dir}/easy-linux directory not found.  Creating folder and ${WT}cloning Github${CY} repo.\\n"
+           printf "  ${CY}${compiled_dir}/easy-linux directory not found.\\n"
+           printf "  ${CY}Creating folder and ${WT}cloning Github${CY} repo.\\n"
            mkdir ${compiled_dir}/easy-linux 
 #           git clone https://github.com/Beesoc/easy-linux.git
      fi
