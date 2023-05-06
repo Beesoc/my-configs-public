@@ -1,13 +1,9 @@
 #!/bin/bash
 # Installer script for Beesoc's Easy Linux Loader.
-#          ADMIN NOTE:  add zip files to archive with:
-#          zip -r INSTALL.zip ./support/ ./install/ ./archive/
 # Version: 0.0.2
 set -e
 
 compiled_dir=$HOME/compiled
-
-#sudo chmod a+x ${compiled_dir}/easy-linux/INSTALL.sh
     
 CY='\e[1;36m'
 WT='\e[1;37m'
@@ -47,7 +43,7 @@ printf "\\n"
 printf "${WT}\\n    For more info on Github\'s Personal Access Token see:\\n" 
 printf "${OG}https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token\\n"
 
-read -pr "Would you like to continue with the installation? [Y/n] " installdec
+read -r "Would you like to continue with the installation? [Y/n] " installdec
 installdec=${installdec:-Y}
 if [[ $installdec =~ ^[Yy]$ ]]; then
   printf "Continuing...\\n"
@@ -74,9 +70,9 @@ fi
        sleep 1
        printf "${WT}..."
        sleep 1
-       cd "${compiled_dir}" || exit
      fi  
-    git clone https://github.com/Beesoc/easy-linux.git
 
+    cd "${compiled_dir}" || exit
+    git clone https://github.com/Beesoc/easy-linux.git
 
     source "$HOME"/compiled/easy-linux/INSTALL.sh
