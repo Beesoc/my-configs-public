@@ -36,7 +36,8 @@ Banner_func() {
 #  █ ▌▀ ▄ ╚ ╝ ╔ ╗ ═ ║  Characters used in the banner.
 }
 Banner_func
-printf "\\n${WT}                 Welcome to the Installer for Beesoc\'s Easy Linux.         Press ${RED}[ctrl+c] ${CY}to cancel\\n"                 ${CY}${NC}\\n" 
+printf "\\n${WT}                 Welcome to the Installer for Beesoc\'s Easy Linux     "
+printf "${CY}Press ${RED}[ctrl+c] ${CY}to cancel${CY}${NC}\\n" 
 printf "\\n      ${CY}This installer will create the necessary folders and clone the official\\n"
 printf "      repo for ${WT}Beesoc\'s Easy Linux ${CY}for installation. You will need a ${WT}Github username\\n"
 printf "      username ${CY}and ${WT}fine-grained access token ${CY}to continue.\\n"
@@ -47,55 +48,35 @@ printf "${WT}\\n    For more info on Github\'s Personal Access Token see:\\n"
 printf "${OG}https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token\\n"
 
 read -pr "Would you like to continue with the installation? [Y/n] " install
-<<<<<<< HEAD
 install=${install:-Y}
 if [[ $install =~ ^[Yy]$ ]]; then
-  echo "Continuing...\\n"
-else
-  echo "Exiting.\\n"
-  exit 0
-fi
-=======
-install=${install:-Y}
-if [[ $install =~ ^[Yy]$ ]]; then
-  printf "Continuing${...}\\n"
+  printf "Continuing...\\n"
 else
   printf "Exiting.\\n"
   exit 0
 fi
->>>>>>> 08ea7ebc81b5dfdf02f505565d21a45a20a42b78
 
-<<<<<<< HEAD
-=======
-printf "${WT}\\n"
->>>>>>> 08ea7ebc81b5dfdf02f505565d21a45a20a42b78
      if [[ ! -d ${compiled_dir} ]]; then
        printf "${CY}  ${compiled_dir} directory not found.  Creating folder and ${WT}cloning Github${CY} repo.\\n"
-       mkdir ${compiled_dir}
+       mkdir "${compiled_dir}"
      fi
      if [[ ! -d "${compiled_dir}/easy-linux" ]]; then
            printf "${CY}  ${compiled_dir}/easy-linux directory not found.\\n"
            printf "${CY}  Creating folder and ${WT}cloning Github ${CY}repo.\\n"
-           mkdir ${compiled_dir}/easy-linux 
+           mkdir "${compiled_dir}"/easy-linux 
      fi
      if [[ -d "${compiled_dir}/easy-linux" ]]; then  
        printf "  ${CY}Existing Github clone for Beesoc\'s Easy Linux found.\\n${CY}"
        printf "       Please Wait, recloning Github repo.\\n" 
        sleep 1 
-       printf "${WT}${...}"
+       printf "${WT}..."
        sudo rm -Rf "${compiled_dir}/easy-linux"  
        sleep 1
-       printf "${WT}${...}"
+       printf "${WT}..."
        sleep 1
-       cd ${compiled_dir} || exit
+       cd "${compiled_dir}" || exit
      fi  
-<<<<<<< HEAD
     git clone https://github.com/Beesoc/easy-linux.git
 
 
-    source $HOME/compiled/easy-linux/INSTALL.sh
-
-=======
-    
-    source "$HOME/compiled/easy-linux/INSTALL.sh"
->>>>>>> 08ea7ebc81b5dfdf02f505565d21a45a20a42b78
+    source "$HOME"/compiled/easy-linux/INSTALL.sh
