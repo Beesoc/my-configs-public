@@ -43,7 +43,7 @@ printf "\\n"
 printf "${WT}\\n    For more info on Github\'s Personal Access Token see:\\n" 
 printf "${OG}https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token\\n"
 
-read -r "Would you like to continue with the installation? [Y/n] " installdec
+read -p "Would you like to continue with the installation? [Y/n] " installdec
 installdec=${installdec:-Y}
 if [[ $installdec =~ ^[Yy]$ ]]; then
   printf "Continuing...\\n"
