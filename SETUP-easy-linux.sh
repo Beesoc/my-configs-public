@@ -32,7 +32,7 @@ Banner_func() {
 #  █ ▌▀ ▄ ╚ ╝ ╔ ╗ ═ ║  Characters used in the banner.
 }
 Banner_func
-printf "\\n${WT}                 Welcome to the Installer for Beesoc\'s Easy Linux     "
+printf "\\n${WT}          Welcome to the Installer for Beesoc\'s Easy Linux     "
 printf "${CY}Press ${RED}[ctrl+c] ${CY}to cancel${CY}${NC}\\n" 
 printf "\\n      ${CY}This installer will create the necessary folders and clone the official\\n"
 printf "      repo for ${WT}Beesoc\'s Easy Linux ${CY}for installation. You will need a ${WT}Github username\\n"
