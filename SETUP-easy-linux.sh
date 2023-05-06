@@ -46,6 +46,10 @@ printf "https://docs.github.com/en/authentication/keeping-your-account-and-data-
 printf " \\n"
 printf "${WT}\\n    For more info on Github's Personal Access Token see:\\n" 
 printf "${OG}https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token.\\n"
+
+read -pr "Would you like to continue with the installation? [Y/n] " install
+
+
 printf " \\n${CY}Press ${WT}any ${CY}key to continue.                            Press ${RED}[ctrl+c] ${CY}to cancel\\n"
 #printf "${WT}\\n    ---->"
 printf "${WT} \\n"
