@@ -41,7 +41,7 @@ printf "\\n  ${WT}If you need to create a fine grained personal access token, se
 printf "${OG}https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-fine-grained-personal-access-token\\n"
 printf "\\n"
 printf "${WT}\\n    For more info on Github\'s Personal Access Token see:\\n" 
-printf "${OG}https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token\\n"
+printf "${OG}https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token${GN}\\n"
 
 read -p "Would you like to continue with the installation? [Y/n] " installdec
 installdec=${installdec:-Y}
