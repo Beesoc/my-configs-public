@@ -4,12 +4,19 @@
 set -e
 
 compiled_dir=$HOME/compiled
-    
-CY='\e[1;36m'
-WT='\e[1;37m'
-RED='\e[1;31m'
-OG='\e[1;93m'
-NC='\e[0m'
+
+echo "#/bin/bash
+# Temp .envrc
+export CY='\e[1;36m'
+export WT='\e[1;37m'
+export RED='\e[1;31m'
+export OG='\e[1;93m'
+export NC='\e[0m'
+
+scripts_dir=/opt/easy-linux" > $compiled_dir/easy-linux/.envrc
+cd $compiled_dir && direnv allow
+
+source $compiled_dir/easy-linux/.envrc
 
 clear
 Banner_func() {
