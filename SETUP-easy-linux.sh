@@ -34,9 +34,9 @@ Banner_func() {
 Banner_func
 printf "\\n${WT}          Welcome to the Installer for Beesoc\'s Easy Linux     "
 printf "${CY}Press ${RED}[ctrl+c] ${CY}to cancel${CY}${NC}\\n" 
-printf "\\n      ${CY}This installer will create the necessary folders and clone the official\\n"
-printf "      repo for ${WT}Beesoc\'s Easy Linux ${CY}for installation. You will need a ${WT}Github username\\n"
-printf "      username ${CY}and ${WT}fine-grained access token ${CY}to continue.\\n"
+printf "\\n      ${OG}This installer will create the necessary folders and clone the official\\n"
+printf "      repo for ${WT}Beesoc\'s Easy Linux ${OG}for installation. You will need a ${WT}Github username\\n"
+printf "      username ${WT}and ${WT}fine-grained access token ${CY}to continue.\\n"
 printf "\\n  ${WT}If you need to create a fine grained personal access token, see here for instructions:${WT}\\n" 
 printf "${OG}https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-fine-grained-personal-access-token\\n"
 printf "\\n"
@@ -46,7 +46,7 @@ printf "${OG}https://docs.github.com/en/authentication/keeping-your-account-and-
 read -p "Would you like to continue with the installation? [Y/n] " installdec
 installdec=${installdec:-Y}
 if [[ $installdec =~ ^[Yy]$ ]]; then
-  printf "${CY}    Continuing...\\n"
+  printf "${OG}    Continuing...\\n"
 else
   printf "${RED}    Exiting.\\n"
   exit 0
