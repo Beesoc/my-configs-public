@@ -4,6 +4,12 @@
 set -e
 
 compiled_dir=$HOME/compiled
+if [[ -d $compiled_dir/tmp ]]; then
+  sudo rm -rf $compiled_dir/tmp
+fi
+
+mkdir $compiled_dir/tmp
+cd $compiled_dir/tmp
 
 echo "#/bin/bash
 # Temp .envrc
@@ -13,10 +19,9 @@ export RED='\e[1;31m'
 export OG='\e[1;93m'
 export NC='\e[0m'
 
-scripts_dir=/opt/easy-linux" > $compiled_dir/easy-linux/.envrc
-cd $compiled_dir && direnv allow
-
-source $compiled_dir/easy-linux/.envrc
+scripts_dir=/opt/easy-linux" > $compiled_dir/tmp/.envrc
+cd $compiled_dir/tmp && direnv allow
+source $compiled_dir/tmp/.envrc
 
 clear
 Banner_func() {
@@ -81,5 +86,5 @@ fi
 
     cd "${compiled_dir}" || exit
     git clone https://github.com/Beesoc/easy-linux.git
-
+    sudo rm -f $compiled_dir/tmp/.envrc
     source "$HOME"/compiled/easy-linux/INSTALL.sh
