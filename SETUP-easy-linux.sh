@@ -37,11 +37,11 @@ printf "${CY}Press ${RED}[ctrl+c] ${CY}to cancel${CY}${NC}\\n"
 printf "\\n      ${CY}This installer will create the necessary folders and clone the official\\n"
 printf "      repo for ${WT}Beesoc\'s Easy Linux ${CY}for installation. You will need a ${WT}Github username\\n"
 printf "      username ${CY}and ${WT}fine-grained access token ${CY}to continue.\\n"
-printf "\\n  ${YW}If you need to create a fine grained personal access token, see here for instructions:${YW}\\n" 
-printf "${GN}https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-fine-grained-personal-access-token\\n"
+printf "\\n  ${WT}If you need to create a fine grained personal access token, see here for instructions:${WT}\\n" 
+printf "${OG}https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token#creating-a-fine-grained-personal-access-token\\n"
 printf "\\n"
-printf "${YW}\\n    For more info on Github\'s Personal Access Token see:\\n" 
-printf "${GN}https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token\\n"
+printf "${WT}\\n    For more info on Github\'s Personal Access Token see:\\n" 
+printf "${OG}https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token\\n"
 
 read -p "Would you like to continue with the installation? [Y/n] " installdec
 installdec=${installdec:-Y}
