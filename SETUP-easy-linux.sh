@@ -46,9 +46,9 @@ printf "${GN}https://docs.github.com/en/authentication/keeping-your-account-and-
 read -p "Would you like to continue with the installation? [Y/n] " installdec
 installdec=${installdec:-Y}
 if [[ $installdec =~ ^[Yy]$ ]]; then
-  printf "Continuing...\\n"
+  printf "${CY}    Continuing...\\n"
 else
-  printf "Exiting.\\n"
+  printf "${RED}    Exiting.\\n"
   exit 0
 fi
 
